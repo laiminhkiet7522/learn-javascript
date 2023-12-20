@@ -67,5 +67,58 @@ console.log("2. Think about which variables should be const variables (which val
 const valueNeverChange = "Never change";
 
 console.log("3. Try to change one of the changed variables now, and observe what happens");
-valueNeverChange = "Changed";
-console.log(valueNeverChange);
+console.log("Error");
+// valueNeverChange = "Changed";
+// console.log(valueNeverChange);
+
+
+// LECTURE: Basic Operators
+console.log("----------LECTURE: Basic Operators----------");
+
+//Math operators
+const now = 2023;
+const ageKiet = now - 2002;
+const ageLai = now - 2003;
+console.log(ageKiet, ageLai);
+
+console.log(ageKiet * 2, ageLai / 2, 2 ** 3);
+
+const firstName = "Lai";
+const lastName = "Kiet";
+console.log(firstName + ' ' + lastName);
+
+//Assignment operators
+let x = 10 + 5;
+x += 10;
+x *= 4;
+x++;
+x--;
+console.log(x);
+
+//Comparison operators
+console.log(ageKiet > ageLai); // >, <, >=, <=
+console.log(ageLai >= 20);
+
+const isFullAge = ageKiet >= 20;
+
+console.log(now - 2002 > now - 2003);
+
+console.log("1. If your country split in half, and each half would contain half the population,then how many people would live in each half?");
+let populations = 90000000;
+let resultpop = populations / 2;
+console.log(resultpop);
+
+console.log("2. Increase the population of your country by 1 and log the result to the console");
+populations++;
+console.log(populations);
+
+console.log("3. Finland has a population of 6 million. Does your country have more people than Finland?");
+console.log(populations > 6000000);
+
+console.log("4. The average population of a country is 33 million people. Does your country have less people than the average country?");
+console.log(populations < 33000000);
+
+console.log("5. Based on the variables you created, create a new variable 'description' which contains a string with this format: 'Portugal is in Europe, and its 11 million people speak portuguese'");
+let description = "Portuguese is in Europe, and its 11 million people speak portuguese";
+console.log(description);
+
