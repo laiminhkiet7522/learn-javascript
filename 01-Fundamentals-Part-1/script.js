@@ -145,34 +145,68 @@
 
 
 // LECTURE: Taking Decisions: if / else Statements
-console.log("----------LECTURE: Taking Decisions: if / else Statements----------");
+// console.log("----------LECTURE: Taking Decisions: if / else Statements----------");
 
-const age = 15;
+// const age = 15;
 
-if(age >= 18){
-  console.log("John can start driving license 🚗");
-}else{
-  const yearLeft = 18 - age;
-  console.log(`John is too young. Wait another ${yearLeft} years!`);
-}
+// if(age >= 18){
+//   console.log("John can start driving license 🚗");
+// }else{
+//   const yearLeft = 18 - age;
+//   console.log(`John is too young. Wait another ${yearLeft} years!`);
+// }
 
-const birthYear = 2002;
-let century;
-if(birthYear <= 2000){
-  century = 20;
-}else{
-  century = 21;
-}
-console.log(`Century: ${century}`);
+// const birthYear = 2002;
+// let century;
+// if(birthYear <= 2000){
+//   century = 20;
+// }else{
+//   century = 21;
+// }
+// console.log(`Century: ${century}`);
 
-console.log("1. If your country's population is greater that 33 million, log a string like this to the console: 'Portugal's population is above average'. Otherwise, log a string like 'Portugal's population is 22 million below average' (the 22 is the average of 33 minus the country's population)");
-let population = 90000000;
-if(population > 33000000){
-  console.log("VietNam's population is above average");
-}else{
-  population = 33000000 - 2000000;
-  console.log(`VietNam's population is ${population} million below average`);
-}
+// console.log("1. If your country's population is greater that 33 million, log a string like this to the console: 'Portugal's population is above average'. Otherwise, log a string like 'Portugal's population is 22 million below average' (the 22 is the average of 33 minus the country's population)");
+// let population = 90000000;
+// if(population > 33000000){
+//   console.log("VietNam's population is above average");
+// }else{
+//   population = 33000000 - 2000000;
+//   console.log(`VietNam's population is ${population} million below average`);
+// }
 
-console.log("2. After checking the result, change the population temporarily to 13 and then to 130. See the different results, and set the population back to original");
-population = 90000000;
+// console.log("2. After checking the result, change the population temporarily to 13 and then to 130. See the different results, and set the population back to original");
+// population = 90000000;
+
+
+// LECTURE: Type Conversion and Coercion
+// console.log("----------LECTURE: Type Conversion and Coercion----------");
+
+//Type conversion
+// const inputYear = '1991';
+// console.log(Number(inputYear), inputYear);
+// console.log(Number(inputYear) + 18);
+
+// console.log(Number("Kiet"));
+// console.log(typeof NaN);
+
+// console.log(String(23), 23);
+
+//Tyoe coercion
+// console.log('I am ' + 22 + ' years old');
+// console.log('22' - 10 - '2');
+// console.log('23' * '2');
+// console.log('23' / 2);
+
+// let n = '1' + 1;
+// n = n - 1;
+// console.log(n);
+
+
+// console.log("1. Predict the result of these 5 operations without executing them:");
+// console.log('9' - '5'); //4
+// console.log('19' - '13' + '17'); //'617'
+// console.log('19' - '13' + 17); //23
+// console.log('123' < 57); //false
+// console.log(5 + 6 + '4' - 9 + 4 + 2); //111
+
+// console.log("2. Execute the operations to check if you were right");
