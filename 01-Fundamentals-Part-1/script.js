@@ -210,3 +210,27 @@
 // console.log(5 + 6 + '4' - 9 + 4 + 2); //111
 
 // console.log("2. Execute the operations to check if you were right");
+
+
+// LECTURE: Truthy and Falsy Values
+// console.log("----------LECTURE: Truthy and Falsy Values----------");
+// console.log("5 falsy values: 0, '', undefined, null, NaN");
+
+// console.log(Boolean(0));
+// console.log(Boolean(undefined));
+// console.log(Boolean("Kiet"));
+// console.log(Boolean({}));
+
+// const money = 0;
+// if (money) {
+//   console.log("Don't spend it all :)");
+// } else {
+//   console.log("You should get a job!");
+// }
+
+// let height;
+// if (height) {
+//   console.log("YAY! Height is DEFINED");
+// } else {
+//   console.log("OH! Height is UNDEFINED");
+// }
