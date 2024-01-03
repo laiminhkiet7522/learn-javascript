@@ -332,3 +332,56 @@
 // } else {
 //   console.log("Portugal does not meet your criteria :(");
 // }
+
+
+// LECTURE: LECTURE: The switch Statement
+// console.log("----------LECTURE: The switch Statement----------");
+
+// const day = 'sunday';
+// switch (day) {
+//   case 'monday':
+//     console.log("Today is monday");
+//     break;
+//   case 'tuesday':
+//     console.log("Today is tuesday");
+//     break;
+//   case 'wednesday':
+//     console.log("Today is wednesday");
+//     break;
+//   case 'thursday':
+//     console.log("Today is thursday");
+//     break;
+//   case 'friday':
+//     console.log("Today is friday");
+//     break;
+//   case 'saturday':
+//   case 'sunday':
+//     console.log("Let's have fun this weekend");
+//     break;
+//   default:
+//     console.log("Invalid date");
+// }
+
+// console.log("1. Use a switch statement to log the following string for the given 'language':\nchinese or mandarin: 'MOST number of native speakers!'\nspanish: '2nd place in number of native speakers'\nenglish: '3rd place'\nhindi: 'Number 4'\narabic: '5th most spoken language'\nfor all other simply log 'Great language too :D'");
+
+// const language = 'vietnamese';
+// switch (language) {
+//   case 'chinese':
+//   case 'mandarin':
+//     console.log('MOST number of native speakers!');
+//     break;
+//   case 'spanish':
+//     console.log('2nd place in number of native speakers');
+//     break;
+//   case 'english':
+//     console.log('3rd place');
+//     break;
+//   case 'hindi':
+//     console.log('Number 4');
+//     break;
+//   case 'arabic':
+//     console.log('5th most spoken language');
+//     break;
+//   default:
+//     console.log('Great language too :D');
+// }
