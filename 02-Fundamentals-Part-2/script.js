@@ -40,10 +40,25 @@
 // }
 // const age1 = calcAge1(2002);
 
-// //Function Expression
+//Function Expression
 // const calcAge2 = function (birthYear) {
 //   return 2023 - birthYear;
 // }
 // const age2 = calcAge2(2002);
 
 // console.log(age1, age2);
+
+
+//Arrow Function
+// const calcAge3 = birthYear => 2023 - birthYear;
+// const age3 = calcAge3(2002);
+// console.log(age3);
+
+// const yearUntilRetirement = (birthYear, firstName) => {
+//   const age = 2040 - birthYear;
+//   const retirement = 65 - age;
+//   // return retirement;
+//   return `${firstName} retires in ${retirement} years`;
+// }
+// console.log(yearUntilRetirement(2002,'Kiet'));
+// console.log(yearUntilRetirement(2003,'Meo'));
