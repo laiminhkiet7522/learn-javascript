@@ -160,3 +160,61 @@
 // }
 // console.log(yearUntilRetirement(2002, 'Minh Kiet'));
 // console.log(yearUntilRetirement(1950, 'John'));
+
+
+// LECTURE: Introduction to Arrays
+// console.log("----------LECTURE: Introduction to Arrays----------");
+const friend1 = 'Phuc';
+const friend2 = 'Thong';
+const friend3 = 'Minh';
+
+const friends = ['Phuc', 'Thong', 'Minh'];
+console.log(friends);
+
+const year = new Array(2000, 2001, 2002);
+
+console.log(friends[0]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+friends[0] = 'Kiet';
+console.log(friends);
+
+const firstName = 'Kiet';
+const kiet = [firstName, 'Minh Lai', 2100 - 2002, 'Programmer', friends];
+console.log(kiet);
+
+//Exercise
+const calcAge = function (birthYear) {
+  return 2050 - birthYear;
+}
+const year_arr = [1990, 2000, 2005, 2015];
+const age1 = calcAge(year_arr[0]);
+const age2 = calcAge(year_arr[1]);
+const age3 = calcAge(year_arr[2]);
+console.log(age1);
+console.log(age2);
+console.log(age3);
+
+const age = [calcAge(year_arr[0]), calcAge(year_arr[1]), calcAge(year_arr[2]), calcAge(year_arr[year_arr.length - 1])];
+console.log(age);
+
+console.log("1. Create an array containing 4 population values of 4 countries of your choice. You may use the values you have been using previously. Store this array into a variable called 'populations'");
+console.log("2. Log to the console whether the array has 4 elements or not(true or false)");
+console.log("3. Create an array called 'percentages' containing the percentages of the world population for these 4 population values. Use the function 'percentageOfWorld1' that you created earlier to compute the 4 percentage values");
+
+const populations = [10, 20, 30, 90];
+console.log(populations.length == 4);
+
+function percentageOfWorld1(population) {
+  return (population / 7900) * 100;
+}
+
+const percentages = [
+  percentageOfWorld1(populations[0]),
+  percentageOfWorld1(populations[1]),
+  percentageOfWorld1(populations[2]),
+  percentageOfWorld1(populations[3])
+];
+console.log(percentages);
