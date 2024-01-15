@@ -227,57 +227,87 @@
 
 
 // LECTURE: Basic Array Operations(Methods)
-console.log("----------LECTURE: Basic Array Operations(Methods)----------");
+// console.log("----------LECTURE: Basic Array Operations(Methods)----------");
 
-//Add elements
-const friends = ['Phuc', 'Thong', 'Minh', 'Tuan', 'Hai'];
-friends.push('Kiet'); //Last
-console.log(friends);
+// //Add elements
+// const friends = ['Phuc', 'Thong', 'Minh', 'Tuan', 'Hai'];
+// friends.push('Kiet'); //Last
+// console.log(friends);
 
-friends.unshift('John'); //First
-console.log(friends);
+// friends.unshift('John'); //First
+// console.log(friends);
 
-//Remove elements
-friends.pop(); //Last
-const poped = friends.pop();
-console.log(poped);
-console.log(friends);
+// //Remove elements
+// friends.pop(); //Last
+// const poped = friends.pop();
+// console.log(poped);
+// console.log(friends);
 
-friends.shift(); //First
-const shifted = friends.shift();
-console.log(shifted);
-console.log(friends);
+// friends.shift(); //First
+// const shifted = friends.shift();
+// console.log(shifted);
+// console.log(friends);
 
-console.log(friends.indexOf('Thong'));
-console.log(friends.indexOf('Bob'));
+// console.log(friends.indexOf('Thong'));
+// console.log(friends.indexOf('Bob'));
 
-friends.push(22);
-console.log(friends.includes('Thong'));
-console.log(friends.includes('Bob'));
-console.log(friends.includes(22));
+// friends.push(22);
+// console.log(friends.includes('Thong'));
+// console.log(friends.includes('Bob'));
+// console.log(friends.includes(22));
 
-if(friends.includes('Kiet')){
-  console.log("You have a friend called Kiet");
-}else{
-  console.log("You don't have a friend called Kiet");
+// if(friends.includes('Kiet')){
+//   console.log("You have a friend called Kiet");
+// }else{
+//   console.log("You don't have a friend called Kiet");
+// }
+
+// console.log("1. Create an array containing all the neighbouring countries of a country of your choice. Choose a country which has at least 2 or 3 neighbours. Store the array into a variable called 'neighbours'");
+// console.log("2. At some point, a new country called 'Utopia' is created in the neighbourhood of your selected country. So add it to the end of the 'neighbours' array");
+// console.log("3. Unfortunately, after some time, the new country is dissolved. So remove it from the end of the array");
+// console.log("4. If the 'neighbours' array does not include the country ‘Germany’, log to the console: 'Probably not a central European country :D'");
+// console.log("5. Change the name of one of your neighbouring countries. To do that, find the index of the country in the 'neighbours' array, and then use that index to change the array at that index position. For example, you can search for 'Sweden' in the array, and then replace it with 'Republic of Sweden'.");
+
+// const neighbours = ['Laos', 'Campuchia', 'China'];
+// neighbours.push('Utopia');
+// console.log(neighbours);
+
+// neighbours.pop();
+// console.log(neighbours);
+
+// if (!neighbours.includes('Germany')){
+//   console.log("Probably not a central European country :D");
+// }
+
+// neighbours[neighbours.indexOf('China')] = "Republic of Sweden";
+// console.log(neighbours);
+
+
+
+// LECTURE: Introduction to Objects
+console.log("----------LECTURE: Introduction to Objects----------");
+
+const kietArray = [
+  'Lai Minh Kiet',
+  '22 years old',
+  'Programmer',
+  ['Phuc', 'Thong', 'Minh']
+];
+console.log(kietArray);
+
+const kietInfo = {
+  fullname: 'Lai Minh Kiet',
+  age: '22 years old',
+  job: 'Programmer',
+  friend: ['Phuc', 'Thong', 'Minh']
 }
 
-console.log("1. Create an array containing all the neighbouring countries of a country of your choice. Choose a country which has at least 2 or 3 neighbours. Store the array into a variable called 'neighbours'");
-console.log("2. At some point, a new country called 'Utopia' is created in the neighbourhood of your selected country. So add it to the end of the 'neighbours' array");
-console.log("3. Unfortunately, after some time, the new country is dissolved. So remove it from the end of the array");
-console.log("4. If the 'neighbours' array does not include the country ‘Germany’, log to the console: 'Probably not a central European country :D'");
-console.log("5. Change the name of one of your neighbouring countries. To do that, find the index of the country in the 'neighbours' array, and then use that index to change the array at that index position. For example, you can search for 'Sweden' in the array, and then replace it with 'Republic of Sweden'.");
+console.log("1. Create an object called 'myCountry' for a country of your choice, containing properties 'country', 'capital', 'language' 'population' and 'neighbours'(an array like we used in previous assignments)");
 
-const neighbours = ['Laos', 'Campuchia', 'China'];
-neighbours.push('Utopia');
-console.log(neighbours);
-
-neighbours.pop();
-console.log(neighbours);
-
-if (!neighbours.includes('Germany')){
-  console.log("Probably not a central European country :D");
+const myCountry = {
+  country: 'Viet Nam',
+  capital: 'Ha Noi capital',
+  language: 'VietNamese',
+  population: '90 milion people',
+  neighbours: ['Laos','Campuchia','China']
 }
-
-neighbours[neighbours.indexOf('China')] = "Republic of Sweden";
-console.log(neighbours);
