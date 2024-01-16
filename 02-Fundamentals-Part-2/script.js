@@ -318,56 +318,122 @@
 
 
 // LECTURE: Dot vs.Bracket Notation
-console.log("----------LECTURE: Dot vs.Bracket Notation----------");
+// console.log("----------LECTURE: Dot vs.Bracket Notation----------");
+
+// const kietInfo = {
+//   firstName: 'Lai',
+//   lastName: 'Minh Kiet',
+//   age: '22 years old',
+//   job: 'Programmer',
+//   friend: ['Phuc', 'Thong', 'Minh']
+// }
+// console.log(kietInfo);
+
+// console.log(kietInfo.firstName);
+// console.log(kietInfo['lastName']);
+
+// const nameKey = 'Name';
+// console.log(kietInfo['first' + nameKey]);
+// console.log(kietInfo['last' + nameKey]);
+
+// // console.log(kietInfo.'last' + nameKey);
+
+// const interestedIn = prompt("What do you want to know about Kiet? Choose between firstName, lastName, age, job, friends");
+
+// if (kietInfo[interestedIn]) {
+//   console.log(kietInfo[interestedIn]);
+// } else {
+//   console.log("Wrong request! Choose between firstName, lastName, age, job, friends");
+// }
+
+// kietInfo.location = 'Viet Nam';
+// kietInfo['facebook'] = 'facebook.com/laiminhkiet7522';
+// console.log(kietInfo);
+
+// //Challenge
+// //Minh Kiet has 3 friends, and his best friends is called Thong
+// console.log(`${kietInfo.lastName} has ${kietInfo.friend.length} friends, and his best friends is called ${kietInfo.friend[1]}`);
+
+// console.log("1. Using the object from the previous assignment, log a string like this to the console: 'Finland has 6 million finnish-speaking people, 3 neighbouring countries and a capital called Helsinki.'");
+// console.log("2. Increase the country's population by two million using dot notation, and then decrease it by two million using brackets notation.");
+
+// const myCountry = {
+//   country: 'Viet Nam',
+//   capital: 'Ha Noi capital',
+//   language: 'VietNamese',
+//   population: '90',
+//   neighbours: ['Laos','Campuchia','China']
+// }
+// console.log(`${myCountry.country} has ${myCountry.population} milion finnish-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`)
+
+// myCountry.population += 2;
+// console.log(myCountry.population);
+
+// myCountry['population'] -= 2;
+// console.log(myCountry.population);
+
+
+
+// LECTURE: Object Methods
+console.log("----------LECTURE: Object Methods----------");
 
 const kietInfo = {
   firstName: 'Lai',
   lastName: 'Minh Kiet',
-  age: '22 years old',
+  birthYear: 2002,
   job: 'Programmer',
-  friend: ['Phuc', 'Thong', 'Minh']
-}
-console.log(kietInfo);
+  friend: ['Phuc', 'Thong', 'Minh'],
+  hasDriversLicense: true,
 
-console.log(kietInfo.firstName);
-console.log(kietInfo['lastName']);
+  // calcAge: function(birthYear){
+  //   return 2024 - birthYear;
+  // },
 
-const nameKey = 'Name';
-console.log(kietInfo['first' + nameKey]);
-console.log(kietInfo['last' + nameKey]);
+  // calcAge: function () {
+  //   return 2024 - this.birthYear;
+  // },
 
-// console.log(kietInfo.'last' + nameKey);
+  calcAge: function () {
+    this.age = 2024 - this.birthYear;
+    return this.age;
+  },
 
-const interestedIn = prompt("What do you want to know about Kiet? Choose between firstName, lastName, age, job, friends");
+  getSummary: function(){
+    return `${this.lastName} is a ${this.calcAge()}-year old programmer, and he has ${this.friend.length} friends. His best friends is called ${this.friend[1] }`;
+  },
+};
+// console.log(kietInfo.calcAge(2002));
+// console.log(kietInfo['calcAge'](2002));
 
-if (kietInfo[interestedIn]) {
-  console.log(kietInfo[interestedIn]);
-} else {
-  console.log("Wrong request! Choose between firstName, lastName, age, job, friends");
-}
+// console.log(kietInfo.calcAge());
 
-kietInfo.location = 'Viet Nam';
-kietInfo['facebook'] = 'facebook.com/laiminhkiet7522';
-console.log(kietInfo);
+// console.log(kietInfo.calcAge());
+// console.log(kietInfo.age);
 
-//Challenge
-//Minh Kiet has 3 friends, and his best friends is called Thong
-console.log(`${kietInfo.lastName} has ${kietInfo.friend.length} friends, and his best friends is called ${kietInfo.friend[1]}`);
+console.log(kietInfo.getSummary());
 
-console.log("1. Using the object from the previous assignment, log a string like this to the console: 'Finland has 6 million finnish-speaking people, 3 neighbouring countries and a capital called Helsinki.'");
-console.log("2. Increase the country's population by two million using dot notation, and then decrease it by two million using brackets notation.");
+console.log("1. Add a method called 'describe' to the 'myCountry' object. This method will log a string to the console, similar to the string logged in the previous assignment, but this time using the 'this' keyword.");
+console.log("2. Call the 'describe' method");
+console.log("3. Add a method called 'checkIsland' to the 'myCountry' object. This method will set a new property on the object, called 'isIsland'. 'isIsland' will be true if there are no neighbouring countries, and false if there are. Use the ternary operator to set the property.");
 
 const myCountry = {
-  country: 'Viet Nam',
-  capital: 'Ha Noi capital',
-  language: 'VietNamese',
-  population: '90',
-  neighbours: ['Laos','Campuchia','China']
-}
-console.log(`${myCountry.country} has ${myCountry.population} milion finnish-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`)
+  country: 'Finland',
+  capital: 'Helsinki',
+  language: 'finnish',
+  population: 6,
+  neighbours: ['Norway', 'Sweden', 'Russia'],
 
-myCountry.population += 2;
-console.log(myCountry.population);
+  describe: function(){
+    console.log(`${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`);
+  },
 
-myCountry['population'] -= 2;
-console.log(myCountry.population);
+  checkIsland: function(){
+    this.isIsland = this.neighbours.lenght == 0 ? true : false;
+
+    //Even simpler version (see why this works...)
+    // this.isIsland = !Boolean(this.neighbours.length);
+  }
+};
+myCountry.describe();
+myCountry.checkIsland();
+console.log(myCountry);
