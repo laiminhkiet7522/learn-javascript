@@ -441,25 +441,92 @@
 
 
 // LECTURE: Iteration: The for Loop
-console.log("----------LECTURE: Iteration: The for Loop----------");
+// console.log("----------LECTURE: Iteration: The for Loop----------");
 
-// console.log("I love you 1 ❤️");
-// console.log("I love you 2 ❤️");
-// console.log("I love you 3 ❤️");
-// console.log("I love you 4 ❤️");
-// console.log("I love you 5 ❤️");
-// console.log("I love you 6 ❤️");
-// console.log("I love you 7 ❤️");
-// console.log("I love you 8 ❤️");
-// console.log("I love you 9 ❤️");
-// console.log("I love you 10 ❤️");
+// // console.log("I love you 1 ❤️");
+// // console.log("I love you 2 ❤️");
+// // console.log("I love you 3 ❤️");
+// // console.log("I love you 4 ❤️");
+// // console.log("I love you 5 ❤️");
+// // console.log("I love you 6 ❤️");
+// // console.log("I love you 7 ❤️");
+// // console.log("I love you 8 ❤️");
+// // console.log("I love you 9 ❤️");
+// // console.log("I love you 10 ❤️");
 
-for (let index = 1; index <= 10; index++) {
-  console.log(`I love you ${index} ❤️`);
+// for (let index = 1; index <= 10; index++) {
+//   console.log(`I love you ${index} ❤️`);
+// }
+
+// console.log("1. There are elections in your country! In a small town, there are only 50 voters. Use a for loop to simulate the 50 people voting, by logging a string like this to the console(for numbers 1 to 50): 'Voter number 1 is currently voting'");
+
+// for (let voter = 1; voter <= 50; voter++) {
+//   console.log(`Voter number ${voter} is currently voting🙋‍♂️`);
+// }
+
+
+
+// LECTURE: Looping Arrays, Breaking and Continuing
+console.log("----------LECTURE: Looping Arrays, Breaking and Continuing----------");
+
+const kietArray = [
+  'Lai',
+  'Minh Kiet',
+  2099 - 2002,
+  'programmer',
+  ['Thong', 'Phuc', 'Minh']
+];
+const type = [];
+
+for (let i = 0; i < kietArray.length; i++) {
+  //Reading from kietArray
+  console.log(kietArray[i], typeof kietArray[i]);
+
+  //Filling types array
+  // type[i] = typeof kietArray[i];
+  type.push(typeof kietArray[i]);
+}
+console.log(type);
+
+const years = [1990, 2000, 2010, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2099 - years[i]);
+}
+console.log(ages);
+
+//Continue and Break Statements
+console.log('---ONLY STRING---');
+for(let i = 0; i < kietArray.length; i++) {
+  if(typeof kietArray[i] !== 'string') {
+    continue;
+  }
+  console.log(kietArray[i], typeof kietArray[i]);
 }
 
-console.log("1. There are elections in your country! In a small town, there are only 50 voters. Use a for loop to simulate the 50 people voting, by logging a string like this to the console(for numbers 1 to 50): 'Voter number 1 is currently voting'");
-
-for (let voter = 1; voter <= 50; voter++) {
-  console.log(`Voter number ${voter} is currently voting🙋‍♂️`);
+console.log('---BREAK WITH NUMBER---');
+for (let i = 0; i < kietArray.length; i++) {
+  if (typeof kietArray[i] === 'number') {
+    break;
+  }
+  console.log(kietArray[i], typeof kietArray[i]);
 }
+
+console.log("1. Let's bring back the 'populations' array from a previous assignment");
+console.log("2. Use a for loop to compute an array called 'percentages2' containing the percentages of the world population for the 4 population values. Use the function 'percentageOfWorld1' that you created earlier");
+console.log("3. Confirm that 'percentages2' contains exactly the same values as the 'percentages' array that we created manually in the previous assignment, and reflect on how much better this solution is");
+
+function percentageOfWorld1(population) {
+  return (population / 7900) * 100;
+}
+
+const populations = [10, 1441, 332, 83];
+const percentages2 = [];
+
+for(let i = 0; i < populations.length; i++) {
+  const perc = percentageOfWorld1(populations[i]);
+  percentages2.push(perc);
+}
+
+console.log(percentages2);
