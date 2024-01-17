@@ -467,7 +467,74 @@
 
 
 // LECTURE: Looping Arrays, Breaking and Continuing
-console.log("----------LECTURE: Looping Arrays, Breaking and Continuing----------");
+// console.log("----------LECTURE: Looping Arrays, Breaking and Continuing----------");
+
+// const kietArray = [
+//   'Lai',
+//   'Minh Kiet',
+//   2099 - 2002,
+//   'programmer',
+//   ['Thong', 'Phuc', 'Minh']
+// ];
+// const type = [];
+
+// for (let i = 0; i < kietArray.length; i++) {
+//   //Reading from kietArray
+//   console.log(kietArray[i], typeof kietArray[i]);
+
+//   //Filling types array
+//   // type[i] = typeof kietArray[i];
+//   type.push(typeof kietArray[i]);
+// }
+// console.log(type);
+
+// const years = [1990, 2000, 2010, 2020];
+// const ages = [];
+
+// for (let i = 0; i < years.length; i++) {
+//   ages.push(2099 - years[i]);
+// }
+// console.log(ages);
+
+// //Continue and Break Statements
+// console.log('---ONLY STRING---');
+// for (let i = 0; i < kietArray.length; i++) {
+//   if (typeof kietArray[i] !== 'string') {
+//     continue;
+//   }
+//   console.log(kietArray[i], typeof kietArray[i]);
+// }
+
+// console.log('---BREAK WITH NUMBER---');
+// for (let i = 0; i < kietArray.length; i++) {
+//   if (typeof kietArray[i] === 'number') {
+//     break;
+//   }
+//   console.log(kietArray[i], typeof kietArray[i]);
+// }
+
+// console.log("1. Let's bring back the 'populations' array from a previous assignment");
+// console.log("2. Use a for loop to compute an array called 'percentages2' containing the percentages of the world population for the 4 population values. Use the function 'percentageOfWorld1' that you created earlier");
+// console.log("3. Confirm that 'percentages2' contains exactly the same values as the 'percentages' array that we created manually in the previous assignment, and reflect on how much better this solution is");
+
+// function percentageOfWorld1(population) {
+//   return (population / 7900) * 100;
+// }
+
+// const populations = [10, 1441, 332, 83];
+// const percentages2 = [];
+
+// for (let i = 0; i < populations.length; i++) {
+//   const perc = percentageOfWorld1(populations[i]);
+//   percentages2.push(perc);
+// }
+
+// console.log(percentages2);
+
+
+
+// LECTURE: Looping Backwards and Loops in Loops
+console.log("----------LECTURE: Looping Backwards and Loops in Loops----------");
 
 const kietArray = [
   'Lai',
@@ -476,57 +543,33 @@ const kietArray = [
   'programmer',
   ['Thong', 'Phuc', 'Minh']
 ];
-const type = [];
 
-for (let i = 0; i < kietArray.length; i++) {
-  //Reading from kietArray
-  console.log(kietArray[i], typeof kietArray[i]);
+// 0, 1, 2,...n
+// n,..., 2, 1, 0
 
-  //Filling types array
-  // type[i] = typeof kietArray[i];
-  type.push(typeof kietArray[i]);
+for (let i = kietArray.length - 1; i >= 0; i--) {
+ console.log(i, kietArray[i]);
 }
-console.log(type);
 
-const years = [1990, 2000, 2010, 2020];
-const ages = [];
-
-for (let i = 0; i < years.length; i++) {
-  ages.push(2099 - years[i]);
-}
-console.log(ages);
-
-//Continue and Break Statements
-console.log('---ONLY STRING---');
-for(let i = 0; i < kietArray.length; i++) {
-  if(typeof kietArray[i] !== 'string') {
-    continue;
+for(let exercise = 1; exercise < 4; exercise++) {
+  console.log(`---Starting exercise ${exercise}---`);
+  for(let rep =1 ; rep < 6; rep++) {
+    console.log(`Lifting weight repetition: ${rep} 🏋️`);
   }
-  console.log(kietArray[i], typeof kietArray[i]);
 }
 
-console.log('---BREAK WITH NUMBER---');
-for (let i = 0; i < kietArray.length; i++) {
-  if (typeof kietArray[i] === 'number') {
-    break;
+console.log("1. Store this array of arrays into a variable called 'listOfNeighbours' [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden','Russia']]; ");
+console.log("2. Log only the neighbouring countries to the console, one by one, not the entire arrays. Log a string like 'Neighbour: Canada' for each country");
+console.log("3. You will need a loop inside a loop for this. This is actually a bit tricky, so don't worry if it's too difficult for you! But you can still try to figure this out anyway");
+
+const listOfNeighbours = [
+  ['Canada', 'Mexico'],
+  ['Spain'],
+  ['Norway', 'Sweden', 'Russia'],
+];
+
+for(let i = 0; i < listOfNeighbours.length; i++){
+  for(let j = 0; j < listOfNeighbours[i].length; j++){
+    console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
   }
-  console.log(kietArray[i], typeof kietArray[i]);
 }
-
-console.log("1. Let's bring back the 'populations' array from a previous assignment");
-console.log("2. Use a for loop to compute an array called 'percentages2' containing the percentages of the world population for the 4 population values. Use the function 'percentageOfWorld1' that you created earlier");
-console.log("3. Confirm that 'percentages2' contains exactly the same values as the 'percentages' array that we created manually in the previous assignment, and reflect on how much better this solution is");
-
-function percentageOfWorld1(population) {
-  return (population / 7900) * 100;
-}
-
-const populations = [10, 1441, 332, 83];
-const percentages2 = [];
-
-for(let i = 0; i < populations.length; i++) {
-  const perc = percentageOfWorld1(populations[i]);
-  percentages2.push(perc);
-}
-
-console.log(percentages2);
