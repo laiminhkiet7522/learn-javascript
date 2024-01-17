@@ -375,65 +375,91 @@
 
 
 // LECTURE: Object Methods
-console.log("----------LECTURE: Object Methods----------");
+// console.log("----------LECTURE: Object Methods----------");
 
-const kietInfo = {
-  firstName: 'Lai',
-  lastName: 'Minh Kiet',
-  birthYear: 2002,
-  job: 'Programmer',
-  friend: ['Phuc', 'Thong', 'Minh'],
-  hasDriversLicense: true,
+// const kietInfo = {
+//   firstName: 'Lai',
+//   lastName: 'Minh Kiet',
+//   birthYear: 2002,
+//   job: 'Programmer',
+//   friend: ['Phuc', 'Thong', 'Minh'],
+//   hasDriversLicense: true,
 
-  // calcAge: function(birthYear){
-  //   return 2024 - birthYear;
-  // },
+//   // calcAge: function(birthYear){
+//   //   return 2024 - birthYear;
+//   // },
 
-  // calcAge: function () {
-  //   return 2024 - this.birthYear;
-  // },
+//   // calcAge: function () {
+//   //   return 2024 - this.birthYear;
+//   // },
 
-  calcAge: function () {
-    this.age = 2024 - this.birthYear;
-    return this.age;
-  },
+//   calcAge: function () {
+//     this.age = 2024 - this.birthYear;
+//     return this.age;
+//   },
 
-  getSummary: function(){
-    return `${this.lastName} is a ${this.calcAge()}-year old programmer, and he has ${this.friend.length} friends. His best friends is called ${this.friend[1] }`;
-  },
-};
-// console.log(kietInfo.calcAge(2002));
-// console.log(kietInfo['calcAge'](2002));
+//   getSummary: function(){
+//     return `${this.lastName} is a ${this.calcAge()}-year old programmer, and he has ${this.friend.length} friends. His best friends is called ${this.friend[1] }`;
+//   },
+// };
+// // console.log(kietInfo.calcAge(2002));
+// // console.log(kietInfo['calcAge'](2002));
 
-// console.log(kietInfo.calcAge());
+// // console.log(kietInfo.calcAge());
 
-// console.log(kietInfo.calcAge());
-// console.log(kietInfo.age);
+// // console.log(kietInfo.calcAge());
+// // console.log(kietInfo.age);
 
-console.log(kietInfo.getSummary());
+// console.log(kietInfo.getSummary());
 
-console.log("1. Add a method called 'describe' to the 'myCountry' object. This method will log a string to the console, similar to the string logged in the previous assignment, but this time using the 'this' keyword.");
-console.log("2. Call the 'describe' method");
-console.log("3. Add a method called 'checkIsland' to the 'myCountry' object. This method will set a new property on the object, called 'isIsland'. 'isIsland' will be true if there are no neighbouring countries, and false if there are. Use the ternary operator to set the property.");
+// console.log("1. Add a method called 'describe' to the 'myCountry' object. This method will log a string to the console, similar to the string logged in the previous assignment, but this time using the 'this' keyword.");
+// console.log("2. Call the 'describe' method");
+// console.log("3. Add a method called 'checkIsland' to the 'myCountry' object. This method will set a new property on the object, called 'isIsland'. 'isIsland' will be true if there are no neighbouring countries, and false if there are. Use the ternary operator to set the property.");
 
-const myCountry = {
-  country: 'Finland',
-  capital: 'Helsinki',
-  language: 'finnish',
-  population: 6,
-  neighbours: ['Norway', 'Sweden', 'Russia'],
+// const myCountry = {
+//   country: 'Finland',
+//   capital: 'Helsinki',
+//   language: 'finnish',
+//   population: 6,
+//   neighbours: ['Norway', 'Sweden', 'Russia'],
 
-  describe: function(){
-    console.log(`${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`);
-  },
+//   describe: function(){
+//     console.log(`${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`);
+//   },
 
-  checkIsland: function(){
-    this.isIsland = this.neighbours.lenght == 0 ? true : false;
+//   checkIsland: function(){
+//     this.isIsland = this.neighbours.lenght == 0 ? true : false;
 
-    //Even simpler version (see why this works...)
-    // this.isIsland = !Boolean(this.neighbours.length);
-  }
-};
-myCountry.describe();
-myCountry.checkIsland();
-console.log(myCountry);
+//     //Even simpler version (see why this works...)
+//     // this.isIsland = !Boolean(this.neighbours.length);
+//   }
+// };
+// myCountry.describe();
+// myCountry.checkIsland();
+// console.log(myCountry);
+
+
+
+// LECTURE: Iteration: The for Loop
+console.log("----------LECTURE: Iteration: The for Loop----------");
+
+// console.log("I love you 1 ❤️");
+// console.log("I love you 2 ❤️");
+// console.log("I love you 3 ❤️");
+// console.log("I love you 4 ❤️");
+// console.log("I love you 5 ❤️");
+// console.log("I love you 6 ❤️");
+// console.log("I love you 7 ❤️");
+// console.log("I love you 8 ❤️");
+// console.log("I love you 9 ❤️");
+// console.log("I love you 10 ❤️");
+
+for (let index = 1; index <= 10; index++) {
+  console.log(`I love you ${index} ❤️`);
+}
+
+console.log("1. There are elections in your country! In a small town, there are only 50 voters. Use a for loop to simulate the 50 people voting, by logging a string like this to the console(for numbers 1 to 50): 'Voter number 1 is currently voting'");
+
+for (let voter = 1; voter <= 50; voter++) {
+  console.log(`Voter number ${voter} is currently voting🙋‍♂️`);
+}
