@@ -534,42 +534,82 @@
 
 
 // LECTURE: Looping Backwards and Loops in Loops
-console.log("----------LECTURE: Looping Backwards and Loops in Loops----------");
+// console.log("----------LECTURE: Looping Backwards and Loops in Loops----------");
 
-const kietArray = [
-  'Lai',
-  'Minh Kiet',
-  2099 - 2002,
-  'programmer',
-  ['Thong', 'Phuc', 'Minh']
-];
+// const kietArray = [
+//   'Lai',
+//   'Minh Kiet',
+//   2099 - 2002,
+//   'programmer',
+//   ['Thong', 'Phuc', 'Minh']
+// ];
 
-// 0, 1, 2,...n
-// n,..., 2, 1, 0
+// // 0, 1, 2,...n
+// // n,..., 2, 1, 0
 
-for (let i = kietArray.length - 1; i >= 0; i--) {
- console.log(i, kietArray[i]);
+// for (let i = kietArray.length - 1; i >= 0; i--) {
+//  console.log(i, kietArray[i]);
+// }
+
+// for(let exercise = 1; exercise < 4; exercise++) {
+//   console.log(`---Starting exercise ${exercise}---`);
+//   for(let rep =1 ; rep < 6; rep++) {
+//     console.log(`Lifting weight repetition: ${rep} 🏋️`);
+//   }
+// }
+
+// console.log("1. Store this array of arrays into a variable called 'listOfNeighbours' [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden','Russia']]; ");
+// console.log("2. Log only the neighbouring countries to the console, one by one, not the entire arrays. Log a string like 'Neighbour: Canada' for each country");
+// console.log("3. You will need a loop inside a loop for this. This is actually a bit tricky, so don't worry if it's too difficult for you! But you can still try to figure this out anyway");
+
+// const listOfNeighbours = [
+//   ['Canada', 'Mexico'],
+//   ['Spain'],
+//   ['Norway', 'Sweden', 'Russia'],
+// ];
+
+// for(let i = 0; i < listOfNeighbours.length; i++){
+//   for(let j = 0; j < listOfNeighbours[i].length; j++){
+//     console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
+//   }
+// }
+
+
+
+// LECTURE: The while Loop
+console.log("----------LECTURE: The while Loop----------");
+
+let rep = 1;
+while (rep <= 10) {
+  console.log(`I love you ${rep} ❤️`);
+  rep++;
 }
 
-for(let exercise = 1; exercise < 4; exercise++) {
-  console.log(`---Starting exercise ${exercise}---`);
-  for(let rep =1 ; rep < 6; rep++) {
-    console.log(`Lifting weight repetition: ${rep} 🏋️`);
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+while (dice != 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice == 6) {
+    console.log("Loop is about to end");
+    break;
   }
 }
 
-console.log("1. Store this array of arrays into a variable called 'listOfNeighbours' [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden','Russia']]; ");
-console.log("2. Log only the neighbouring countries to the console, one by one, not the entire arrays. Log a string like 'Neighbour: Canada' for each country");
-console.log("3. You will need a loop inside a loop for this. This is actually a bit tricky, so don't worry if it's too difficult for you! But you can still try to figure this out anyway");
+console.log("1. Recreate the challenge from the lecture 'Looping Arrays, Breaking and Continuing', but this time using a while loop(call the array 'percentages3') ");
+console.log("2. Reflect on what solution you like better for this task: the for loop or the while loop ? ");
 
-const listOfNeighbours = [
-  ['Canada', 'Mexico'],
-  ['Spain'],
-  ['Norway', 'Sweden', 'Russia'],
-];
-
-for(let i = 0; i < listOfNeighbours.length; i++){
-  for(let j = 0; j < listOfNeighbours[i].length; j++){
-    console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
-  }
+function percentageOfWorld1(population) {
+  return (population / 7900) * 100;
 }
+
+const populations = [10, 1441, 332, 83];
+const percentages3 = [];
+
+let i = 0;
+while (i < populations.length) {
+  const perc = percentageOfWorld1(populations[i]);
+  percentages3.push(perc);
+  i++;
+}
+console.log(percentages3);
