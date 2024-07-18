@@ -191,7 +191,7 @@
 
 // console.log(String(23), 23);
 
-//Tyoe coercion
+//Type coercion
 // console.log('I am ' + 22 + ' years old');
 // console.log('22' - 10 - '2');
 // console.log('23' * '2');

@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // let hasDriversLicense = false;
 // const passTest = true;
@@ -9,8 +9,6 @@
 // if (hasDriversLicense) {
 //   console.log('I can drive');
 // }
-
-
 
 // LECTURE: Functions
 // console.log("----------LECTURE: Functions----------");
@@ -48,9 +46,7 @@
 // const descFinland = describeCountry('Finland', 6, 'Helsinki');
 // console.log(descPortugal, descGermany, descFinland);
 
-
-
-// LECTURE: Function Declarations vs.Expressions
+// LECTURE: Function Declarations vs. Expressions
 // console.log("----------LECTURE: Function Declarations vs.Expressions----------");
 
 //Function Declaration
@@ -89,8 +85,6 @@
 // const percUSA2 = percentageOfWorld2(300);
 // console.log(percPortugal2, percChina2, percUSA2);
 
-
-
 // LECTURE: Arrow Functions
 // console.log("----------LECTURE: Arrow Functions----------");
 
@@ -109,8 +103,6 @@
 
 // console.log("1. Recreate the last assignment, but this time create an arrow function called 'percentageOfWorld3'");
 // const percentageOfWorld3 = population => (population / 7900) * 100;
-
-
 
 //LECTURE: Functions Calling Other Functions
 // console.log("----------LECTURE: Functions Calling Other Functions----------");
@@ -166,8 +158,6 @@
 // }
 // console.log(yearUntilRetirement(2002, 'Minh Kiet'));
 // console.log(yearUntilRetirement(1950, 'John'));
-
-
 
 // LECTURE: Introduction to Arrays
 // console.log("----------LECTURE: Introduction to Arrays----------");
@@ -227,8 +217,6 @@
 // ];
 // console.log(percentages);
 
-
-
 // LECTURE: Basic Array Operations(Methods)
 // console.log("----------LECTURE: Basic Array Operations(Methods)----------");
 
@@ -285,8 +273,6 @@
 // neighbours[neighbours.indexOf('China')] = "Republic of Sweden";
 // console.log(neighbours);
 
-
-
 // LECTURE: Introduction to Objects
 // console.log("----------LECTURE: Introduction to Objects----------");
 
@@ -314,8 +300,6 @@
 //   population: '90 milion people',
 //   neighbours: ['Laos','Campuchia','China']
 // }
-
-
 
 // LECTURE: Dot vs.Bracket Notation
 // console.log("----------LECTURE: Dot vs.Bracket Notation----------");
@@ -371,8 +355,6 @@
 
 // myCountry['population'] -= 2;
 // console.log(myCountry.population);
-
-
 
 // LECTURE: Object Methods
 // console.log("----------LECTURE: Object Methods----------");
@@ -438,8 +420,6 @@
 // myCountry.checkIsland();
 // console.log(myCountry);
 
-
-
 // LECTURE: Iteration: The for Loop
 // console.log("----------LECTURE: Iteration: The for Loop----------");
 
@@ -463,8 +443,6 @@
 // for (let voter = 1; voter <= 50; voter++) {
 //   console.log(`Voter number ${voter} is currently voting🙋‍♂️`);
 // }
-
-
 
 // LECTURE: Looping Arrays, Breaking and Continuing
 // console.log("----------LECTURE: Looping Arrays, Breaking and Continuing----------");
@@ -531,8 +509,6 @@
 
 // console.log(percentages2);
 
-
-
 // LECTURE: Looping Backwards and Loops in Loops
 // console.log("----------LECTURE: Looping Backwards and Loops in Loops----------");
 
@@ -574,42 +550,44 @@
 //   }
 // }
 
-
-
 // LECTURE: The while Loop
-console.log("----------LECTURE: The while Loop----------");
+// console.log("----------LECTURE: The while Loop----------");
 
-let rep = 1;
-while (rep <= 10) {
-  console.log(`I love you ${rep} ❤️`);
-  rep++;
-}
+// let rep = 1;
+// while (rep <= 10) {
+//   console.log(`I love you ${rep} ❤️`);
+//   rep++;
+// }
 
-let dice = Math.trunc(Math.random() * 6) + 1;
-console.log(dice);
-while (dice != 6) {
-  console.log(`You rolled a ${dice}`);
-  dice = Math.trunc(Math.random() * 6) + 1;
-  if (dice == 6) {
-    console.log("Loop is about to end");
-    break;
-  }
-}
+// let dice = Math.trunc(Math.random() * 6) + 1;
+// console.log(dice);
+// while (dice != 6) {
+//   console.log(`You rolled a ${dice}`);
+//   dice = Math.trunc(Math.random() * 6) + 1;
+//   if (dice == 6) {
+//     console.log("Loop is about to end");
+//     break;
+//   }
+// }
 
-console.log("1. Recreate the challenge from the lecture 'Looping Arrays, Breaking and Continuing', but this time using a while loop(call the array 'percentages3') ");
-console.log("2. Reflect on what solution you like better for this task: the for loop or the while loop ? ");
+// console.log(
+//   "1. Recreate the challenge from the lecture 'Looping Arrays, Breaking and Continuing', but this time using a while loop(call the array 'percentages3') "
+// );
+// console.log(
+//   "2. Reflect on what solution you like better for this task: the for loop or the while loop ? "
+// );
 
-function percentageOfWorld1(population) {
-  return (population / 7900) * 100;
-}
+// function percentageOfWorld1(population) {
+//   return (population / 7900) * 100;
+// }
 
-const populations = [10, 1441, 332, 83];
-const percentages3 = [];
+// const populations = [10, 1441, 332, 83];
+// const percentages3 = [];
 
-let i = 0;
-while (i < populations.length) {
-  const perc = percentageOfWorld1(populations[i]);
-  percentages3.push(perc);
-  i++;
-}
-console.log(percentages3);
+// let i = 0;
+// while (i < populations.length) {
+//   const perc = percentageOfWorld1(populations[i]);
+//   percentages3.push(perc);
+//   i++;
+// }
+// console.log(percentages3);
